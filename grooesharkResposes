@@ -1,0 +1,17 @@
+POST /stream.php HTTP/1.1
+Host: stream160a-he.grooveshark.com
+Connection: keep-alive
+Content-Length: 102
+Origin: http://grooveshark.com
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+DNT: 1
+Referer: http://grooveshark.com/static/JSQueue_20140129154635.swf
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: ismobile=no; PHPSESSID=37532ea3377766bbc594f4bf2998b3ea
+
+
+
+curl "http://stream160a-he.grooveshark.com/stream.php" -H "Origin: http://grooveshark.com" -H "Accept-Encoding: gzip,deflate,sdch" -H "Accept-Language: en-US,en;q=0.8" -H "User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded" -H "Accept: */*" -H "Referer: http://grooveshark.com/static/JSQueue_20140129154635.swf" -H "Cookie: ismobile=no; PHPSESSID=37532ea3377766bbc594f4bf2998b3ea" -H "Connection: keep-alive" -H "DNT: 1" --data "streamKey=7af450fc8a12197eafb9e495f8cc56fa6ee9af26"%"5F52f9a38e"%"5F2499667"%"5F2d510b3"%"5F111d23610"%"5F1"%"5F40" --compressed

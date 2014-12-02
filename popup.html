@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <!-- <link rel=stylesheet type=text/css href="style.css"> -->
+        <script src="scripts/ext/jquery-1.11.1.min.js"></script>
+        <script src="scripts/ext/DataTables-1.10.3/media/js/jquery.dataTables.min.js"></script>
+        <script src="scripts/ext/jquery.jeditable.mini.js"></script>
+        <script src="scripts/dl.js"></script>
+        <script src="bower_components/sweetalert/lib/sweet-alert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/lib/sweet-alert.css">
+        <link rel="stylesheet" type="text/css" href="scripts/ext/DataTables-1.10.3/media/css/jquery.dataTables.min.css">
+        <button id='dlSelected'>Download Selected</button>
+        <style type="text/css">
+            .url { overflow: hidden; max-width: 200px;}
+            label { float: left;}
+            button { background: #bdc3c7; border: 0px; font-size: medium; padding: 10px; float: right;}
+            .dlBox { background: #e74c3c;}
+            .selected .dlBox { background: #27ae60;}
+            .green { background: #27ae60;}
+        </style>
+    </head>
+    <body>
+        <table cellpadding="0" cellspacing="0" border="0" class="display compact" id="dlList">
+        </table>
+    </body>
+</html>
