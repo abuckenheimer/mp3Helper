@@ -19,7 +19,8 @@ backgroundPageConnection.onMessage.addListener(function (dataset, sender) {
                 "className": "editableText"
         },
             {   "title": "URL",
-                "className": "editableBox url"
+                // "className": "editableBox url"
+                "className": "editableText url"
         },
             {   "title": "Download",
                 "className": "dlBox",
@@ -42,15 +43,18 @@ backgroundPageConnection.onMessage.addListener(function (dataset, sender) {
  
     $('#dlSelected').click( function () {
         var dldata = dlTable.rows('.selected').data();
-        var fnames = []
+        var fnames = [];
+        var urls_downloaded = [];
         for (var item in dldata) {
             if (item <= dlTable.rows('.selected').data().length) {
                 console.log('downloading:', dldata[item]);
                 fname = dldata[item][0]+ ' - ' + dldata[item][1] + '.mp3';
                 fnames.push(fname);
+                urls_downloaded.push(dldata[item][2]);
                 chrome.downloads.download({url:dldata[item][2], filename:fname});
             }
         }
+        sender.postMessage(urls_downloaded);
         swal({title:'You have Downloaded:', text:fnames.join('\n'), type:'success'}, function() {window.close();});
     } );
     $('.editableText').editable(function(value,settings){

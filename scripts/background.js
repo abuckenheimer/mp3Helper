@@ -18,6 +18,12 @@ chrome.webRequest.onBeforeRequest.addListener(saveResource, filter, e_opts);
 
 
 chrome.runtime.onConnect.addListener(function(dlPage) {
+    dlPage.onMessage.addListener(function (confirm, sender) {
+        console.log('confirming:',confirm);
+        for (var key in confirm) {
+            delete resources[confirm[key]];
+        }
+    });
     var dataset = [];
     for (var key in resources) {
         if (resources.hasOwnProperty(key)) {
@@ -27,3 +33,4 @@ chrome.runtime.onConnect.addListener(function(dlPage) {
     console.log("Sending dl dataset", dataset);
     dlPage.postMessage(dataset);
 });
+
